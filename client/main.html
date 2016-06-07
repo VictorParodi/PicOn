@@ -3,47 +3,11 @@
 </head>
 
 <body>
-  {{> home}}
+
 </body>
 
-<template name="home">
-  <div class="ui grid container" id="homeContainer">
-    <div class="row">
-      <div class="sixteen wide column">
-        <h1 id="homeHeader">Welcome to PicOn!</h1>
-      </div> <!-- div.sixteen wide column -->
-    </div> <!-- div.row -->
-
-    <div class="three column row" id="optionContainer">
-      <div class="column">
-        <h2 class="center aligned ui icon header">
-          <i class="find icon"></i>
-          <div class="content">
-            Explore
-            <div class="sub header"> Look at all the Pics </div>
-          </div> <!-- div.content -->
-        </h2> <!-- h2 -->
-      </div> <!-- div.column -->
-
-      <div class="column">
-        <h2 class="center aligned ui icon header">
-          <i class="users icon"></i>
-          <div class="content">
-            Sign Up
-            <div class="sub header">Load new pics</div>
-          </div> <!-- div.content -->
-        </h2> <!-- h2 -->
-      </div> <!-- div.column -->
-
-      <div class="column">
-        <h2 class="center aligned ui icon header">
-          <i class="user icon"></i>
-          <div class="content">
-            Login
-            <div class="sub header">Enjoy your account</div>
-          </div> <!-- div.content -->
-        </h2> <!-- h2 -->
-      </div> <!-- div.column -->
-    </div> <!-- div.three column row -->
-  </div> <!-- div.ui grid container -->
+<template name="mainLayout">
+  <main>
+    {{> Template.dynamic template=content}}
+  </main>
 </template>

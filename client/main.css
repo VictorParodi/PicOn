@@ -28,6 +28,22 @@ h2>i.user {
 
 
 
+/* ------------------------------ Signup Styles ------------------------------ */
+div#signupContainer {
+  margin-top: 8em;
+}
+
+
+
+
+/* ------------------------------ Login Styles ------------------------------ */
+div#loginContainer {
+  margin-top: 8em;
+}
+
+
+
+
 /* ------------------------------ General Styles ------------------------------ */
 /*div.row {
   border: 1px solid gray !important;
