@@ -1,1 +1,38 @@
 /* CSS declarations go here */
+/* ------------------------------ Home Styles ------------------------------ */
+div#homeContainer {
+  margin-top: 8em;
+}
+
+h1#homeHeader {
+  color: #424242;
+  text-align: center;
+}
+
+div#optionContainer {
+  margin-top: 4em;
+}
+
+h2>i.find {
+  color: #EA4528;
+}
+
+h2>i.users {
+  color: #146AA0;
+}
+
+h2>i.user {
+  color: #29B952;
+}
+
+
+
+
+/* ------------------------------ General Styles ------------------------------ */
+/*div.row {
+  border: 1px solid gray !important;
+}
+
+div.column {
+  border: 1px dashed orange;
+}*/

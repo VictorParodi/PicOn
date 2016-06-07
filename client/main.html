@@ -3,23 +3,47 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> info}}
+  {{> home}}
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
+<template name="home">
+  <div class="ui grid container" id="homeContainer">
+    <div class="row">
+      <div class="sixteen wide column">
+        <h1 id="homeHeader">Welcome to PicOn!</h1>
+      </div> <!-- div.sixteen wide column -->
+    </div> <!-- div.row -->
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com">Discussions</a></li>
-  </ul>
+    <div class="three column row" id="optionContainer">
+      <div class="column">
+        <h2 class="center aligned ui icon header">
+          <i class="find icon"></i>
+          <div class="content">
+            Explore
+            <div class="sub header"> Look at all the Pics </div>
+          </div> <!-- div.content -->
+        </h2> <!-- h2 -->
+      </div> <!-- div.column -->
+
+      <div class="column">
+        <h2 class="center aligned ui icon header">
+          <i class="users icon"></i>
+          <div class="content">
+            Sign Up
+            <div class="sub header">Load new pics</div>
+          </div> <!-- div.content -->
+        </h2> <!-- h2 -->
+      </div> <!-- div.column -->
+
+      <div class="column">
+        <h2 class="center aligned ui icon header">
+          <i class="user icon"></i>
+          <div class="content">
+            Login
+            <div class="sub header">Enjoy your account</div>
+          </div> <!-- div.content -->
+        </h2> <!-- h2 -->
+      </div> <!-- div.column -->
+    </div> <!-- div.three column row -->
+  </div> <!-- div.ui grid container -->
 </template>
