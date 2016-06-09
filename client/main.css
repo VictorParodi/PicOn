@@ -44,6 +44,22 @@ div#loginContainer {
 
 
 
+/* ------------------------------ Gallery Styles ------------------------------ */
+div.cards {
+  margin-bottom: 1em !important;
+}
+
+div.card {
+  width: 100% !important;
+}
+
+div.card img {
+  height: 25em !important;
+}
+
+
+
+
 /* ------------------------------ General Styles ------------------------------ */
 div.row {
   border: 1px solid gray !important;
