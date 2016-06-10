@@ -4,3 +4,15 @@ Template.gallery.helpers({
     return Pics.find({}, {sort: {'createdOn': -1}});
   }
 });
+
+
+
+
+/* ------------------------------ Events Block ------------------------------ */
+Template.gallery.events({
+  'mouseover .image': function() {
+    $('.special.cards .image').dimmer({
+      on:'hover'
+    });
+  }
+});

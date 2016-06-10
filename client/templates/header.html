@@ -3,12 +3,18 @@
     <div class="row">
       <div class="sixteen wide column">
         <div class="ui text menu">
-          <div class="item header"> Welcome User </div>
-          <a href="#" class="item">Action 1</a>
+          <div class="item header"> Welcome <span class="targetUser"> {{getUserLogged}} </span></div>
+          {{#if currentUser}}
+          <a href="" class="item jsEventLogout">Logout</a>
 
-          <a href="#" class="item">Action 2</a>
-          
-          <a href="#" class="item">Action 3</a>
+          <a href="" class="item">Add Pics</a>
+          {{else}}
+          <a href="/" class="item">Home</a>
+
+          <a href="" class="item goSignup">Sign Up</a>
+
+          <a href="" class="item goLogin">Login</a>
+          {{/if}}
         </div> <!-- div.text menu -->
       </div> <!-- div.sixteen wide column -->
     </div> <!-- div.row -->

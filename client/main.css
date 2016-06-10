@@ -44,6 +44,14 @@ div#loginContainer {
 
 
 
+/* ------------------------------ Header Styles ------------------------------ */
+span.targetUser {
+  color: orange;
+  margin-left: 1em;
+}
+
+
+
 /* ------------------------------ Gallery Styles ------------------------------ */
 div.cards {
   margin-bottom: 1em !important;
@@ -61,10 +69,10 @@ div.card img {
 
 
 /* ------------------------------ General Styles ------------------------------ */
-div.row {
+/*div.row {
   border: 1px solid gray !important;
 }
 
 div.column {
   border: 1px dashed orange;
-}
+}*/
