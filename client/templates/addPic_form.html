@@ -1,0 +1,26 @@
+<template name="addPicForm">
+  <div class="ui modal" id="addPicModal">
+    <div class="header">
+      Add New Pic
+    </div> <!-- header -->
+
+    <div class="content">
+      <form class="ui form">
+        <div class="field">
+          <label for="picSrc"> Image URL </label>
+          <input type="text" name="picSrc" placeholder="Enter the image's url here" required="required">
+        </div>
+
+        <div class="field">
+          <label for="picName"> Image name </label>
+          <input type="text" name="picName" placeholder="Enter the image name" required="required">
+        </div>
+      </form> <!-- form -->
+    </div> <!-- content -->
+
+    <div class="actions">
+      <div class="ui cancel green button">Add Image</div>
+      <div class="ui approve orange button">Cancel</div>
+    </div> <!-- actions -->
+  </div>
+</template>

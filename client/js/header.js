@@ -18,6 +18,10 @@ Template.header.events({
     Meteor.logout(FlowRouter.go('home'));
   },
 
+  'click .jsAddPics': function() {
+    $('#addPicModal').modal('show');
+  },
+
   'click .goSignup': function() {
     FlowRouter.go('signupForm');
   },
