@@ -8,12 +8,17 @@
           <a href="" class="item jsEventLogout">Logout</a>
 
           <a href="" class="ui blue button jsAddPics" tabindex="0">Add Pics</a>
+
           {{else}}
           <a href="/" class="item">Home</a>
 
           <a href="" class="item goSignup">Sign Up</a>
 
           <a href="" class="item goLogin">Login</a>
+          {{/if}}
+
+          {{#if userFilterActivated}}
+          <a href="" class="ui green button js-event-delUserFilter" tabindex="0">Show all Pics</a>
           {{/if}}
         </div> <!-- div.text menu -->
       </div> <!-- div.sixteen wide column -->

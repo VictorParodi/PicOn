@@ -1,7 +1,12 @@
 /* ------------------------------ Helpers Block ------------------------------ */
 Template.gallery.helpers({
   getPics: function() {
-    return Pics.find({}, {sort: {'createdOn': -1}});
+    var activatedFilter = Session.get('userFilter');
+    if (activatedFilter) {
+      return Pics.find({'createdById':activatedFilter}, {sort: {'createdOn': -1}});
+    } else {
+      return Pics.find({}, {sort: {'createdOn': -1}});
+    }
   }
 });
 
@@ -20,5 +25,9 @@ Template.gallery.events({
     var picId = this.data_id;
     var rating = $(event.currentTarget).data('userrating');
     Pics.update({'_id':picId}, {$set: {'rating':rating}});
+  },
+
+  'click .js-Event-setUserFilter': function() {
+    Session.set('userFilter', this.createdById);
   }
 });

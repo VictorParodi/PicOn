@@ -7,6 +7,15 @@ Template.header.helpers({
     } else {
       return 'Invitado';
     }
+  },
+
+  userFilterActivated: function() {
+    var activatedFilter = Session.get('userFilter');
+    if (activatedFilter) {
+      return true;
+    } else {
+      return false;
+    }
   }
 });
 
@@ -28,5 +37,9 @@ Template.header.events({
 
   'click .goLogin': function() {
     FlowRouter.go('login');
+  },
+
+  'click .js-event-delUserFilter': function() {
+    Session.set('userFilter', false);
   }
 });

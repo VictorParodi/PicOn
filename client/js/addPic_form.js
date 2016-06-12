@@ -12,7 +12,7 @@ Template.addPicForm.onRendered(function() {
           'picSrc': picSrc,
           'rating': 0,
           'createdBy': user.username,
-          'createdById': user,
+          'createdById': user._id,
           'createdOn':new Date()
         }
 
