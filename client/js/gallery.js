@@ -10,9 +10,15 @@ Template.gallery.helpers({
 
 /* ------------------------------ Events Block ------------------------------ */
 Template.gallery.events({
-  'mouseover .image': function() {
+  'mouseenter .image': function() {
     $('.special.cards .image').dimmer({
       on:'hover'
     });
+  },
+
+  'click .jsEventRating': function(event) {
+    var picId = this.data_id;
+    var rating = $(event.currentTarget).data('userrating');
+    Pics.update({'_id':picId}, {$set: {'rating':rating}});
   }
 });
