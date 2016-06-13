@@ -13,17 +13,17 @@ div#optionContainer {
   margin-top: 4em;
 }
 
-h2 i.find {
-  color: #EA4528;
-}
+  div#optionContainer h2 i.find {
+    color: #EA4528;
+  }
 
-h2 i.users {
-  color: #146AA0;
-}
+  div#optionContainer h2 i.users {
+    color: #146AA0;
+  }
 
-h2 i.user {
-  color: #29B952;
-}
+  div#optionContainer h2 i.user {
+    color: #29B952;
+  }
 
 
 
@@ -64,6 +64,39 @@ div.card {
 div.card img {
   height: 25em !important;
 }
+
+
+
+
+/* ------------------------------ Single Pic Page Styles ------------------------------ */
+div#sinlgePicContainer img.image {
+  border-radius: 5px;
+  height: 38em;
+  width: 100%;
+}
+
+div#sinlgePicContainer i.file {
+  color: #009688;
+}
+
+div#sinlgePicContainer i.user {
+  color: #039be5;
+}
+
+div#sinlgePicContainer i.star {
+  color: #fdd835;
+}
+
+div#sinlgePicContainer i.home {
+  color: #7e57c2;
+}
+
+div#sinlgePicContainer i.remove {
+  color: #d50000;
+}
+
+
+
 
 
 

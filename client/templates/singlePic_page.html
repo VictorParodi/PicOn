@@ -1,0 +1,65 @@
+<template name="singlePicPage">
+  <div class="ui grid container" id="sinlgePicContainer">
+    {{#with getDataFromUrl}}
+    <div class="row">
+      <div class="centered seven wide column">
+        <img src="{{picSrc}}" alt="{{picName}}" class="image"/>
+      </div> <!-- div.column -->
+    </div> <!-- div.row -->
+
+    <div class="four column row">
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <i class="file image outline icon"></i>
+          <div class="content">
+            Name
+            <div class="sub header">{{picName}}</div>
+          </div> <!-- div.content -->
+        </h2> <!-- h2 -->
+      </div> <!-- div.column -->
+
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <i class="user icon"></i>
+          <div class="content">
+            Created By
+            <div class="sub header">{{createdBy}}</div>
+          </div> <!-- div.content -->
+        </h2> <!-- h2 -->
+      </div> <!-- div.column -->
+
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <i class="star icon"></i>
+          <div class="content">
+            Rating
+            <div class="sub header">This Pic has {{rating}} stars</div>
+          </div> <!-- div.content -->
+        </h2> <!-- h2 -->
+      </div> <!-- div.column -->
+
+      {{#if currentUser}}
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <i class="remove icon"></i>
+          <div class="content">
+            Delete
+            <div class="sub header">Watch out</div>
+          </div> <!-- div.content -->
+        </h2> <!-- h2 -->
+      </div> <!-- div.column -->
+      {{else}}
+      <div class="column">
+        <h2 class="ui center aligned icon header">
+          <a href="" class="goSignup"><i class="home icon"></i></a>
+          <div class="content">
+            Home
+            <div class="sub header">Create a account or Log in</div>
+          </div> <!-- div.content -->
+        </h2> <!-- h2 -->
+      </div> <!-- div.column -->
+      {{/if}}
+    </div> <!-- div.four column row -->
+    {{/with}}
+  </div> <!-- div.ui grid container -->
+</template>
