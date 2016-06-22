@@ -19,11 +19,15 @@ Template.singlePicPage.events({
   'click .jsEventDelPic': function() {
 
     var verify = confirm("Do you really want to delete this Pic?");
+    var userId = Meteor.userId();
+    var createdById = this.createdById;
 
-    if (verify) {
+    if (verify && (userId === createdById)) {
       var picId = this._id;
       FlowRouter.go('gallery');
       Pics.remove({'_id':picId});
+    } else {
+      alert("This Pic doesn't belong you");
     }
   }
 });
