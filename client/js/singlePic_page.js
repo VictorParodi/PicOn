@@ -24,10 +24,18 @@ Template.singlePicPage.events({
 
     if (verify && (userId === createdById)) {
       var picId = this._id;
+      Meteor.call('deletePic', picId);
       FlowRouter.go('gallery');
-      Pics.remove({'_id':picId});
     } else {
       alert("This Pic doesn't belong you");
     }
   }
+});
+
+
+
+
+/* ------------------------------ Subscriptions ------------------------------ */
+Template.singlePicPage.onRendered(function() {
+  this.subscribe('showPics');
 });

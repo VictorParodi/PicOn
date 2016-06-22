@@ -7,16 +7,9 @@ Template.addPicForm.onRendered(function() {
       var picName = $('[name=picName]').val();
 
       if (picSrc && picName) {
-        var dataNewPic = {
-          'picName': picName,
-          'picSrc': picSrc,
-          'rating': 0,
-          'createdBy': user.username,
-          'createdById': user._id,
-          'createdOn':new Date()
-        }
 
-        Pics.insert(dataNewPic);
+        Meteor.call('addPic', user, picSrc, picName)
+
         $('[name=picSrc]').val('');
         $('[name=picName]').val('');
         $('#addPicModal').modal('hide');

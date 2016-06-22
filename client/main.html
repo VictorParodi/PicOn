@@ -7,7 +7,9 @@
 </body>
 
 <template name="mainLayout">
-  {{> Template.dynamic template=top}}
+  <header>
+    {{> Template.dynamic template=top}}
+  </header>
 
   <main>
     {{> Template.dynamic template=content}}

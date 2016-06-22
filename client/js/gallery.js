@@ -32,7 +32,7 @@ Template.gallery.events({
   'click .jsEventRating': function(event) {
     var picId = this.data_id;
     var rating = $(event.currentTarget).data('userrating');
-    Pics.update({'_id':picId}, {$set: {'rating':rating}});
+    Meteor.call('updateRating', picId, rating);
   },
 
   'click .js-Event-setUserFilter': function() {
