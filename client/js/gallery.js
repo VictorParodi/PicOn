@@ -45,3 +45,11 @@ Template.gallery.events({
     FlowRouter.go('singlePicPage', params);
   }
 });
+
+
+
+
+/* ------------------------------ Subscriptions ------------------------------ */
+Template.gallery.onRendered(function() {
+  this.subscribe('showPics');
+});
