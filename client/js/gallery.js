@@ -2,8 +2,8 @@
 Template.gallery.helpers({
   pathForSinglePic: function(){
     var routeName = 'singlePicPage';
-    var pic = this;
-    var params = {'picId':pic._id};
+    var picId = this._id;
+    var params = {'picId':picId};
     var path = FlowRouter.path(routeName, params);
     return path;
   },

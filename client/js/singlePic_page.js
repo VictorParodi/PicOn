@@ -12,7 +12,18 @@ Template.singlePicPage.helpers({
 
 /* ------------------------------ Events Block ------------------------------ */
 Template.singlePicPage.events({
-  'click .goSignup': function() {
+  'click .goHome': function() {
     FlowRouter.go('home');
+  },
+
+  'click .jsEventDelPic': function() {
+
+    var verify = confirm("Do you really want to delete this Pic?");
+
+    if (verify) {
+      var picId = this._id;
+      FlowRouter.go('gallery');
+      Pics.remove({'_id':picId});
+    }
   }
 });
