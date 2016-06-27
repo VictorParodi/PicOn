@@ -50,6 +50,6 @@ Template.gallery.events({
 
 
 /* ------------------------------ Subscriptions ------------------------------ */
-Template.gallery.onRendered(function() {
+Template.gallery.onCreated(function() {
   this.subscribe('showPics');
 });

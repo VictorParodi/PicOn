@@ -24,8 +24,9 @@ Template.singlePicPage.events({
 
     if (verify && (userId === createdById)) {
       var picId = this._id;
-      Meteor.call('deletePic', picId);
-      FlowRouter.go('gallery');
+      Meteor.call('deletePic', picId, function() {
+        FlowRouter.go('gallery');
+      });
     } else {
       alert("This Pic doesn't belong you");
     }
@@ -36,6 +37,10 @@ Template.singlePicPage.events({
 
 
 /* ------------------------------ Subscriptions ------------------------------ */
-Template.singlePicPage.onRendered(function() {
-  this.subscribe('showPics');
+Template.singlePicPage.onCreated(function() {
+  var self = this;
+  self.autorun(function() {
+    var picId = FlowRouter.getParam('picId');
+    self.subscribe('showPics', picId);
+  });
 });

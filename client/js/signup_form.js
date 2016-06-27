@@ -12,7 +12,7 @@ Template.signupForm.events({
     }
 
     Accounts.createUser(dataNewUser, function(error) {
-      (error)? console.log(error.reason) : FlowRouter.go('gallery');
+      (error)? alert(error.reason) : FlowRouter.go('gallery');
     });
   }
 });
